@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div>
+      <h1>Hello, {{current_user.username}}</h1>
+      <p>Welcome to {{var.app_name}}</p>
+    </div>
+    <div>
+      <p>Current Devices:</p>
+      {% for device in devices %}
+      <div>
+        <p>{{ device.id }}</p>
+        <p>{{ device.name }} has ip {{ device.ip }} </p>
+      </div>
+      {% endfor %}
+    </div>
+{% endblock %}
